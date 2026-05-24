@@ -5,7 +5,7 @@ This repository helps you practice SQL logic using various schemas. It includes 
 ## 📁 File Structure
 
 * `schema.sql`: Contains the database blueprints, table structures, and relationships.
-* `seed.sql`: Contains large mock datasets for testing analytical queries.
+* `seed_data.sql`: Contains large mock datasets for testing analytical queries.
 
 ## 📊 Case Studies
 
