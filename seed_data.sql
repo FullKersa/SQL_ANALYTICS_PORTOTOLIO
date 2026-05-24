@@ -15,9 +15,63 @@ INSERT INTO students(id, name, score, class) VALUES(1, 'Mark', 894, 7), (2, 'Bil
 INSERT INTO employees_mng(id, name, managerId) VALUES(1, 'Rob', null), (2, 'Tom', null), (3, 'Roger', 1), (4, 'Victor', 3), (5, 'John', 4), (6, 'Shawn', 2), (7, 'Alice', 1), (8, 'Bob', 2), (9, 'Charlie', 3), (10, 'Dave', 7), (11, 'Eve', 7), (12, 'Frank', 8);
 
 -- Dari moviegenres.txt
-INSERT INTO genres(id, name) VALUES(1, 'Comedy'), (2, 'Action'), (3, 'Thriller'), (4, 'Science Fiction'), (5, 'Romance'), (6, 'Horror');
-INSERT INTO movies(id, name) VALUES(1, 'Bad Boys'), (2, 'Source Code'), (3, 'The Bourne Ultimatum'), (4, 'Inception'), (5, 'Titanic'), (6, 'The Conjuring'), (7, 'Deadpool'), (8, 'Interstellar');
-INSERT INTO moviesGenres(movieId, genreId) VALUES(1, 1), (1, 2), (1, 3), (1, 4), (2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (4, 2), (4, 4), (4, 3), (5, 5), (6, 6), (6, 3), (7, 1), (7, 2), (8, 4), (8, 5);
+INSERT INTO genres(name) VALUES
+('Comedy'), ('Action'), ('Thriller'), ('Science Fiction'), ('Romance'), ('Horror');
+
+INSERT INTO movies(name) VALUES
+('Bad Boys'), ('Source Code'), ('The Bourne Ultimatum'), ('Inception'), 
+('Titanic'), ('The Conjuring'), ('Deadpool'), ('Interstellar'),
+('The Dark Knight'), ('Avengers: Endgame'), ('Get Out'), 
+('Parasite'), ('La La Land'), ('Mad Max: Fury Road'), 
+('The Matrix'), ('John Wick'), ('Knives Out'), 
+('Everything Everywhere All at Once'), ('A Quiet Place'), 
+('Doctor Strange'), ('Spider-Man: Into the Spider-Verse'), 
+('Hereditary'), ('Midsommar'), ('Whiplash'), 
+('The Grand Budapest Hotel'), ('Arrival'), ('Ex Machina'), 
+('Annihilation'), ('Nope'), ('Us'), ('Oppenheimer'), 
+('Dune'), ('Top Gun: Maverick'), ('The Menu'), 
+('Bullet Train'), ('Glass Onion'), ('Barbarian'), 
+('The Batman');
+
+INSERT INTO moviesGenres(movieId, genreId) VALUES
+(1, 1), (1, 2), (1, 3), (1, 4),
+(2, 2), (2, 3), (2, 4),
+(3, 2), (3, 3),
+(4, 2), (4, 4), (4, 3),
+(5, 5),
+(6, 6), (6, 3),
+(7, 1), (7, 2),
+(8, 4), (8, 5),
+(9, 2), (9, 3),
+(10, 2), (10, 4),
+(11, 6), (11, 3),
+(12, 3),
+(13, 5), (13, 1),
+(14, 2), (14, 4),
+(15, 2), (15, 4),
+(16, 2), (16, 3),
+(17, 3), (17, 1),
+(18, 1), (18, 4),
+(19, 6), (19, 3),
+(20, 2), (20, 4),
+(21, 2), (21, 4), (21, 1),
+(22, 6), (22, 3),
+(23, 6), (23, 3),
+(24, 3),
+(25, 1), (25, 3),
+(26, 4), (26, 3),
+(27, 4), (27, 3),
+(28, 4), (28, 6),
+(29, 6), (29, 4),
+(30, 6), (30, 3),
+(31, 3), (31, 4),
+(32, 4), (32, 2),
+(33, 2), (33, 3),
+(34, 3), (34, 6),
+(35, 2), (35, 1),
+(36, 3), (36, 1),
+(37, 6), (37, 3),
+(38, 2), (38, 3);
 
 -- Dari studentrankings.txt
 INSERT INTO colleges(id, name) VALUES(1, 'Pi Institute Of Engineering'), (2, 'Kappa Institute Of Technology'), (3, 'Omega Science Academy'), (4, 'Alpha Business School');
