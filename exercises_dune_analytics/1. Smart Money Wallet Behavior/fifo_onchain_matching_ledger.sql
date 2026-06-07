@@ -16,12 +16,6 @@ WITH
             AND token_bought_symbol NOT IN (
                 'USDT', 'USDC', 'DAI', 'FDUSD', 'USDD', 'FRAX', 'TUSD'
             )
-            AND tx_from IN (
-                from_hex('93d4d4cfa8b386b87dfec0382b06b08b2601d1b5'),
-                from_hex('fae000a93a3aba2fa854448b2181568e709f05e8'),
-                from_hex('ae2fc483527b8ef99eb5d9b44875f005ba1fae13'),
-                from_hex('a875d2ef094ad0135a58001894091753d07138cb')
-            )
     ),
     SELL_ORDER AS (
         SELECT
@@ -39,12 +33,6 @@ WITH
             )
             AND token_sold_symbol NOT IN (
                 'USDT', 'USDC', 'DAI', 'FDUSD', 'USDD', 'FRAX', 'TUSD'
-            )
-            AND tx_from IN (
-                from_hex('93d4d4cfa8b386b87dfec0382b06b08b2601d1b5'),
-                from_hex('fae000a93a3aba2fa854448b2181568e709f05e8'),
-                from_hex('ae2fc483527b8ef99eb5d9b44875f005ba1fae13'),
-                from_hex('a875d2ef094ad0135a58001894091753d07138cb')
             )
     ),
     CUMULATIVE_TOTAL_BUY AS (
@@ -108,3 +96,4 @@ SELECT
     (end_bound - start_bound) * (sell_price_usd_per_token - buy_price_usd_per_token) AS realized_pnl_usd
 FROM FIFO_MATCHING
 WHERE (end_bound - start_bound) > 0
+LIMIT 30
